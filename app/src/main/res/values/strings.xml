@@ -1,0 +1,19 @@
+<resources>
+  <string name="app_name">SongRecogniser</string>
+  <string name="action_settings">Settings</string>
+  <string name="hello_world">Hello world!</string>
+  <string name="speech_prompt">Say something&#8230;</string>
+  <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+  <string name="tap_on_mic">Tap on mic to speak</string>
+  <string name="API_KEY">Bearer wUYt9n04cMRcHUIM9DdFd8WQRo7zgnIPsZIGVkHimaDDDvejmDvA7QyrYeVZ8yDu"</string>
+  <string name="RESPONSE">response</string>
+  <string name="HITS">hits</string>
+  <string name="RESULT">result</string>
+  <string name="SONG_FULL_TITLE">full_title</string>
+  <string name="HEADER_IMAGE_URL">header_image_url</string>
+  <string name="PATH">path</string>
+  <string name="PRIMARY_ARTIST">primary_artist</string>
+  <string name="ARTIST_NAME">name</string>
+  <string name="title_activity_song_suggestion">SongSuggestionActivity</string>
+  <string name="SONG_DATA_LIST">song_data_list</string>
+</resources>
