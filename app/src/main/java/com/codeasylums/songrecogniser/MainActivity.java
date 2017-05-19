@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  {
 
   private TextView    txtSpeechInput;
   private ImageButton btnSpeak;
@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
     // hide the action bar
 //    getActionBar().hide();
 
-   /* String test=getinfo.getmyData(this,"Shape of You",txtSpeechInput, new DataCallback() {
+    String test=new GetData().getmyData(this,"Shape of You",txtSpeechInput, new DataCallback() {
       @Override
       public void onSuccess(List<SongData> songDataList) {
         Toast.makeText(getApplicationContext(),songDataList.get(0).getFull_title(),Toast.LENGTH_LONG).show();
@@ -69,7 +69,6 @@ intent.putParcelableArrayListExtra(getApplicationContext().getString(R.string.SO
       }
     });
 progressBar.setVisibility(View.VISIBLE);
-*/
     txtSpeechInput.setText("Tap Mic To Detect Song");
  //   Log.d("STRING",test);
     btnSpeak.setOnClickListener(new View.OnClickListener() {
@@ -156,10 +155,6 @@ progressBar.setVisibility(View.VISIBLE);
     return true;
   }
 
-  public void setRecylView(List<SongData> songDataList,Context context){
-
-
-  }
 
 
 }

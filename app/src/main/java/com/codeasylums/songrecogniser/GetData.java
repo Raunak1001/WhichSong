@@ -63,7 +63,7 @@ Log.d("GET_DATA",url);
                         .getString(
                             context.getString(R.string.ARTIST_NAME)));
                 songDataList.add(songData);
-                Log.d("DATA", songDataList.get(i).getFull_title());
+                Log.d("DATA", songDataList.get(i).getPath());
 
               }
 

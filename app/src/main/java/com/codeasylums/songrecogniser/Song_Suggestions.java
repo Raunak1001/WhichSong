@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import java.util.List;
 
 public class Song_Suggestions extends AppCompatActivity {
@@ -29,6 +30,16 @@ Log.d("SONG", String.valueOf(songDataList.size()));
     songListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     SongSuggestionAdatpter songSuggestionAdatpter =new SongSuggestionAdatpter(songDataList,this);
 songListRecyclerView.setAdapter(songSuggestionAdatpter);
+
+    songListRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this,
+        new RecyclerItemClickListener.OnItemClickListener() {
+          @Override
+          public void onItemClick(View view, int position) {
+            Intent intent = new Intent(view.getContext(),Lyrics.class);
+            startActivity(intent);
+          }
+        }));
+
   }
 
   @Override
