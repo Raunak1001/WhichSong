@@ -16,4 +16,5 @@
   <string name="ARTIST_NAME">name</string>
   <string name="title_activity_song_suggestion">SongSuggestionActivity</string>
   <string name="SONG_DATA_LIST">song_data_list</string>
+  <string name="LYRICS_PATH">lyrics_path</string>
 </resources>

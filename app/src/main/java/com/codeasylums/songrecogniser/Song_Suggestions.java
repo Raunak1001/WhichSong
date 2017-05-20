@@ -14,12 +14,12 @@ import java.util.List;
 public class Song_Suggestions extends AppCompatActivity {
 
   RecyclerView songListRecyclerView;
-
+  List<SongData> songDataList;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_song_suggestion);
-    List<SongData> songDataList =getIntent().getParcelableArrayListExtra(this.getString(R.string.SONG_DATA_LIST));
+     songDataList =getIntent().getParcelableArrayListExtra(this.getString(R.string.SONG_DATA_LIST));
 Log.d("SONG", String.valueOf(songDataList.size()));
     android.support.v7.app.ActionBar actionBar = getSupportActionBar();
     actionBar.setHomeButtonEnabled(true);
@@ -36,6 +36,7 @@ songListRecyclerView.setAdapter(songSuggestionAdatpter);
           @Override
           public void onItemClick(View view, int position) {
             Intent intent = new Intent(view.getContext(),Lyrics.class);
+            intent.putExtra(getResources().getString(R.string.LYRICS_PATH),songDataList.get(position).getPath());
             startActivity(intent);
           }
         }));

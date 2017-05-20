@@ -49,7 +49,19 @@ Picasso.with(context)
     .load(songDataList.get(i).getHeader_image_url())
 
     .transform(new CircleTransform())
-.resize(height,width)
+.resize(height,width)/*String test=new GetData().getmyData(this,"Shape of You",txtSpeechInput, new DataCallback() {
+      @Override
+      public void onSuccess(List<SongData> songDataList) {
+        Toast.makeText(getApplicationContext(),songDataList.get(0).getFull_title(),Toast.LENGTH_LONG).show();
+        progressBar.setVisibility(View.INVISIBLE);
+      Intent intent =new Intent(getApplicationContext(),Song_Suggestions.class);
+intent.putParcelableArrayListExtra(getApplicationContext().getString(R.string.SONG_DATA_LIST),
+    (ArrayList<? extends Parcelable>) songDataList
+);
+        startActivity(intent);
+      }
+    });
+progressBar.setVisibility(View.VISIBLE);*/
     .centerCrop()
     .into(holder.songHeaderImage);
   }

@@ -55,8 +55,7 @@ public class MainActivity extends Activity  {
     editor.commit();
     // hide the action bar
 //    getActionBar().hide();
-
-    String test=new GetData().getmyData(this,"Shape of You",txtSpeechInput, new DataCallback() {
+    /*String test=new GetData().getmyData(this,"Shape of You",txtSpeechInput, new DataCallback() {
       @Override
       public void onSuccess(List<SongData> songDataList) {
         Toast.makeText(getApplicationContext(),songDataList.get(0).getFull_title(),Toast.LENGTH_LONG).show();
@@ -68,7 +67,7 @@ intent.putParcelableArrayListExtra(getApplicationContext().getString(R.string.SO
         startActivity(intent);
       }
     });
-progressBar.setVisibility(View.VISIBLE);
+progressBar.setVisibility(View.VISIBLE);*/
     txtSpeechInput.setText("Tap Mic To Detect Song");
  //   Log.d("STRING",test);
     btnSpeak.setOnClickListener(new View.OnClickListener() {
